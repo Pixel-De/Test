@@ -1,0 +1,161 @@
+
+.App-header {
+  background-color: #ffffff;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: calc(10px + 2vmin);
+  border-bottom: 0.5px solid rgb(235, 235, 235);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  transition: ease 0.5s;
+}
+.header-item-container{
+  display: flex;
+  justify-content: space-evenly;
+  min-width: 30%;
+}
+/*@media only screen and (min-width:720px ){
+
+  .button{
+    display: block;
+  }
+  .burger{
+    display: none;
+  }
+}
+@media only screen and (max-width:719px ){
+  
+  .button{
+    display: none;
+  }
+  .burger{
+    display: flex;
+  }
+}*/
+.button{
+  border: 1px solid black;
+  font-weight: lighter;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  margin: 5px;
+}
+.flow-dark::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -10px;
+  height: 100%;
+  width: 130%;
+  background: rgba(0, 0, 0,0.7);
+  transform: skewX(25deg);
+  transition: ease 0.5s;
+  z-index: 0;
+}
+.flow-dark:hover::before{
+  width: 0;
+}
+.flow-dark{
+  padding: 1%;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.flow-white::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -10px;
+  height: 100%;
+  width: 180%;
+  background: rgba(255, 255, 255,0.7);
+  transform: skewX(25deg);
+  transition: ease 0.5s;
+  z-index: 0;
+}
+
+.flow-white:hover::before{
+  width: 0;
+}
+.flow-white{
+  padding: 1%;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.burger{
+  width: 10vw;
+  height: 4vh;
+  flex-direction: column;
+  background: transparent;
+  justify-content: center;
+  align-items: center;
+  padding: 0.1vh;
+}
+.bread{
+  width: 60%;
+  height: 1vh;
+  background-color: rgb(0, 0, 0);
+  margin: 0.3vh auto;
+  transition: ease 0.5s;
+}
+.body{
+  min-height: 80vh;
+  width: 100vw;
+  overflow:hidden;
+  display: flex;
+  position: relative;
+}
+
+.body-item{
+  background: rgb(198, 206, 198);
+  min-height: 70vh;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5%;
+  position: relative;
+
+}
+.item-card{
+  min-height: 70vh;
+  width: 100%;
+}
+.slider{
+  margin-top: 15vh;
+  overflow: hidden;
+  height: 70vh;
+  width: 300vw;
+  display: flex;
+  position: absolute;
+  transition: ease 0.5s;
+}
+@keyframes swipe{
+  0%   {transform: translateX(0vw);}
+  25%   {transform: translateX(-100vw);}
+  50%   {transform: translateX(-200vw);}
+  75%   {transform: translateX(-100vw);}
+  100%   {transform: translateX(0vw);}
+}
+.back{
+  height: 90vh;
+  width: 100%;
+}
+.title{
+  font-weight: bold;
+  font-size: calc(100% + 3px);
+  font-family: 'Open-sans';
+  padding: 1vw;
+  border-bottom: 1px solid black;
+}
